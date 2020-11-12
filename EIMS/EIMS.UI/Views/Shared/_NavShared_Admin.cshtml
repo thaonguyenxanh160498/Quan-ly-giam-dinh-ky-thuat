@@ -1,0 +1,128 @@
+﻿@using EIMS.UI.Models
+@{
+
+    UserInfo nd_dv = (UserInfo)Session["NguoiDung"];
+
+}
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="@Url.Action("MainPage", "Dashboard", new { area = "QuanTri" })" class="site_title"><i class="fa fa-home"></i> <span>QUẢN TRỊ</span></a>
+        </div>
+        <div class="clearfix"></div>
+        <!-- menu profile quick info -->
+        <div class="profile clearfix">
+            <div class="profile_pic">
+                <img src="@(!string.IsNullOrEmpty(nd_dv.User.photo) ? nd_dv.User.photo.Replace("~/", "/") : "/Files/images/default/user_empty.jpg")" alt="@nd_dv.User.name" class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Xin chào,</span>
+                <h2>@nd_dv.User.name</h2>
+            </div>
+        </div>
+        <!-- /menu profile quick info -->
+        <br />
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <ul class="nav side-menu">
+                    <li class="mn-dashboard"><a href="@Url.Action("MainPage", "Dashboard", new { area = "QuanTri" })"><i class="fa fa-building-o"></i> Dashboard </a></li>
+                    @*@if (nd_dv.User.LoaiNguoiDung == EnumUserType.ADMIN || nd_dv.User.LoaiNguoiDung == EnumUserType.SUB_ADMIN)
+                    {*@
+                        <li class="mn-themhoso"><a href="@Url.Action("Update","GiamDinh", new { area="QuanTri"})"><i class="fa fa-user"></i>Thêm hồ sơ giám định</a></li>
+                        <li class="mn-danhsach"><a href="@Url.Action("MainPage","GiamDinh", new { area="QuanTri"})"><i class="fa fa-compress"></i>Danh sách hồ sơ </a></li>
+                        <li class="mn-thuoc"><a href="@Url.Action("MainPage","Thuoc", new { area="QuanTri"})"><i class="fa fa-sliders"></i>Phân công giám định</a></li>
+                        <li class="mn-benh"><a href="@Url.Action("MainPage","Benh", new { area="QuanTri"})"><i class="fa fa-level-up"></i>Bệnh</a></li>
+                        <li class="mn-homepage mn-services mn-category-crops mn-product-category mn-fertilizer">
+                            <a><i class="fa fa-toggle-off"></i>Dịch vụ<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li class="mn-category-fertilizer"><a href="@Url.Action("MainPage","DanhMucDichVu", new { area="QuanTri"})">Danh mục dịch vụ</a></li>
+                                <li class="mn-fertilizer"><a href="@Url.Action("MainPage","DichVu", new { area="QuanTri"})">Dịch vụ</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="mn-homepage mn-tintuc mn-cam-nang-kien-thuc mn-huong-dan-trong-trot">
+                            <a><i class="fa fa-newspaper-o"></i>Khám bệnh<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li class="mn-dangky"><a href="@Url.Action("DangKy","KhamBenh", new { area="QuanTri"})">Đăng kí khám bệnh</a></li>
+                                <li class="mn-khambenh"><a href="@Url.Action("MainPage","KhamBenh", new { area="QuanTri"})">Khám bệnh ngoại trú</a></li>
+                                <li class="mn-chuyentuyen"><a href="@Url.Action("ChuyenTuyen","KhamBenh", new { area="QuanTri"})">Danh sách chuyển tuyến</a></li>
+                            </ul>
+                        </li>
+                        <li class="mn-homepage mn-services mn-category-crops mn-product-category">
+                            <a><i class="fa fa-contao"></i> Danh mục<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li class="mn-category-crops"><a href="@Url.Action("MainPage","Crops", new { area="QuanTri"})">Danh mục cây trồng</a></li>
+                                <li class="mn-product-category"><a href="@Url.Action("Category_MainPage","Product", new { area="QuanTri"})">Danh mục sản phẩm</a></li>
+                            </ul>
+                        </li>
+                        <li class="mn-homepage mn-services mn-banks mn-bank-branch mn-policy mn-aboutus mn-config">
+                            <a><i class="fa fa-cogs"></i> Cấu hình<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li class="mn-config"><a href="@Url.Action("Config","Configs", new { area="QuanTri"})">Cấu hình</a></li>
+                                <li class="mn-policy"><a href="@Url.Action("Policy","Configs", new { area="QuanTri"})"> Điều khoản và chính sách</a></li>
+                                <li class="mn-aboutus"><a href="@Url.Action("AboutUs","Configs", new { area="QuanTri"})"> Về chúng tôi</a></li>
+
+                            </ul>
+                        </li>
+
+                    @*}*@
+                    
+
+                </ul>
+            </div>
+        </div>
+        <!-- /sidebar menu -->
+    </div>
+</div>
+<!-- top navigation -->
+<div class="top_nav">
+    <div class="nav_menu">
+        <nav>
+            <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      @nd_dv.User.name
+                        <span class="fa fa-angle-down"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                        <li><a href="@Url.Action("Info","NguoiDung", new { area = "QuanTri", id= nd_dv.User.code})"> Thông tin cá nhân</a></li>
+                        <li>
+                            <a class="" style="cursor:pointer;padding-right:10px;" onclick="javascript: $('#modal-qltaikhoan').load('@Url.Action("Change_Password","Home",new { area="" })', function (e) { $('#modal-qltaikhoan').modal('show'); });"> Đổi mật khẩu</a>
+                        </li>
+
+                        <li>
+                            <a class="" style="cursor:pointer;padding-right:10px;" onclick="javascript: $('#modal-qltaikhoan').load('@Url.Action("Config","Home",new { area="" })', function (e) { $('#modal-qltaikhoan').modal('show'); });">Cấu hình</a>
+                        </li>
+
+                        <li><a href="@Url.Action("Logout","Home", new { area = ""})"><i class="fa fa-sign-out pull-right"></i> Đăng xuất</a></li>
+                    </ul>
+                </li>
+                @*<li role="presentation" class="nav-item dropdown">
+                        <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-green">0</span>
+                        </a>
+                        <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-138px, 17px, 0px);">
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img src="images/img.jpg" alt="Profile Image"></span>
+                                    <span>
+                                        <span>John Smith</span>
+                                        <span class="time">3 mins ago</span>
+                                    </span>
+                                    <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>*@
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- /top navigation -->

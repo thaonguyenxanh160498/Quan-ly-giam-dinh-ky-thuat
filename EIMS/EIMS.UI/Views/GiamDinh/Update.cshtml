@@ -1,0 +1,206 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+<div class="x_panel">
+    <div class="x_title">
+        <h2><i class="fa fa-pencil"></i>Hồ sơ giám định</h2>
+        <div class="clearfix"></div>
+        <ul class="nav nav-tabs bar_tabs nhomquyen col-md-12" role="tablist">
+            <li role="presentation" class="active"><a href="#" id="thongtincoban">Hồ sơ giám định</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <form id="frm-capnhat" method="post" enctype="multipart/form-data" novalidate="novalidate" class="fv-form fv-form-bootstrap">
+            <input type="hidden" id="Id" name="Id" value="@(Model != null ? Model.KhamBenh.Id:0)" />
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Ngày tạo phiếu:</label>
+                    <div>
+                        <div class='input-group date datetimepicker1' id=''>
+                            <input type='text' class="form-control" id="NgaySinh" name="NgaySinh" value="@(DateTime.Today.ToString("dd/MM/yyyy"))" autocomplete="off" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Email</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" readonly value="" autocomplete="off" )>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Nơi yêu cầu</label>
+                    <div>
+                        <select class="ctr-select" data-live-search="true" name="GioiTinh" id="GioiTinh" disabled="@(Model != null)">
+                            <option value="" @(Model == null ? "selected" : "")>Chọn giới tính....</option>
+                            <option value="1" @(Model != null && Model.NguoiDung.GioiTinh != null && Model.NguoiDung.GioiTinh == 1 ? "selected" : "")>Nam</option>
+                            <option value="2" @(Model != null && Model.NguoiDung.GioiTinh != null && Model.NguoiDung.GioiTinh == 2 ? "selected" : "")>Nữ</option>
+                            <option value="3" @(Model != null && Model.NguoiDung.GioiTinh != null && Model.NguoiDung.GioiTinh == 3 ? "selected" : "")>Khác</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Ngày dự kiến hoàn thành:</label>
+                    <div>
+                        <div class='input-group date datetimepicker1' id=''>
+                            <input type='text' class="form-control" id="NgaySinh" name="NgaySinh" value="@(DateTime.Today.ToString("dd/MM/yyyy"))" autocomplete="off" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Tên người bàn giao</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" readonly value="" autocomplete="off" )>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Chức vụ</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" readonly value="" autocomplete="off" )>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Loại giám định</label>
+                    <div>
+                        <select class="ctr-select" data-live-search="true" name="GioiTinh" id="GioiTinh" disabled="@(Model != null)">
+                            <option value="" @(Model == null ? "selected" : "")>Chọn giới tính....</option>
+                            <option value="1" @(Model != null && Model.NguoiDung.GioiTinh != null && Model.NguoiDung.GioiTinh == 1 ? "selected" : "")>Nam</option>
+                            <option value="2" @(Model != null && Model.NguoiDung.GioiTinh != null && Model.NguoiDung.GioiTinh == 2 ? "selected" : "")>Nữ</option>
+                            <option value="3" @(Model != null && Model.NguoiDung.GioiTinh != null && Model.NguoiDung.GioiTinh == 3 ? "selected" : "")>Khác</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Số điện thoại</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" readonly value="" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label" for="first-name">Nội dung yêu cầu giám định</label>
+                    <div>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label" for="first-name">Mô tả chi tiết yêu cầu</label>
+                    <div>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label" for="first-name">Các vật chứng đi kèm</label>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Tên vật chứng</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" value="" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                    <label class="control-label" for="first-name">Đơn vị tính</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" value="" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                    <label class="control-label" for="first-name">Giá trị</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh"  value="" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label" for="first-name">Mô tả tình trạng</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" value="" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label" for="first-name">Hình thức trả</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" value="" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label" for="first-name">Vị trí hiện tại</label>
+                    <div>
+                        <input type="text" class="form-control" id="NgaySinh" name="NgaySinh" value="" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                <div class="clearfix"></div>
+                <div class="ln_solid"></div>
+
+                <div class="form-group clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-right">
+                
+                        <button id="btn-save" type="button" onclick="saveData()" class="btn btn-success">OK</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="modal-capnhatthongtin"></div>
+<div class="modal" tabindex="-1" role="dialog" id="modal-themmoithongtin"></div>
+<script>
+    mnActive = "mn-themhoso";
+    $(document).ready(function () {
+        $(".ctr-select").selectpicker({
+            width: '100%',
+            showTick: true,
+        });
+        $('.datetimepicker1').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on("dp.change", function (e) {
+            $('#frm-capnhat1').formValidation('updateStatus', 'BirthDay', 'NOT_VALIDATED').formValidation('validateField', 'BirthDay');
+        });
+    });
+
+</script>
+<script>
+
+    @*let dataModel = @Html.Raw(Json.Encode(Model.OrderDetails));*@
+    $(function () {
+        $('#ValueDate').datetimepicker({ format: 'DD/MM/YYYY' });
+        $('#ExpireDate').datetimepicker({
+            format: 'DD/MM/YYYY',
+        });
+
+
+
+    });
+</script>
+

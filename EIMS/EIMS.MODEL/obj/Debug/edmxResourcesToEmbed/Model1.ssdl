@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EIMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="academiclevel">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="edureducerate" Type="int" />
+    <Property Name="researchreducerate" Type="int" />
+    <Property Name="eduduty" Type="int" />
+    <Property Name="researchduty" Type="int" />
+    <Property Name="eduduty1" Type="int" />
+    <Property Name="researchduty1" Type="int" />
+  </EntityType>
+  <EntityType Name="academictitle">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="eduduty1" Type="int" />
+    <Property Name="researchduty1" Type="int" />
+    <Property Name="rate" Type="float" />
+    <Property Name="edureducerate" Type="int" />
+    <Property Name="researchreducerate" Type="int" />
+    <Property Name="eduduty" Type="int" />
+    <Property Name="researchduty" Type="int" />
+  </EntityType>
+  <EntityType Name="AppConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImageLogin" Type="nvarchar(max)" />
+    <Property Name="ImagePanelLogin" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="approvedstatus">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="thetype" Type="varchar" MaxLength="20" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="statusnumber" Type="int" />
+  </EntityType>
+  <EntityType Name="armyrank">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="edureducerate" Type="int" />
+    <Property Name="researchreducerate" Type="int" />
+    <Property Name="eduduty" Type="int" />
+    <Property Name="researchduty" Type="int" />
+    <Property Name="eduduty1" Type="int" />
+    <Property Name="researchduty1" Type="int" />
+  </EntityType>
+  <EntityType Name="degree">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="eduduty1" Type="int" />
+    <Property Name="researchduty1" Type="int" />
+    <Property Name="rate" Type="float" />
+    <Property Name="edureducerate" Type="int" />
+    <Property Name="researchreducerate" Type="int" />
+    <Property Name="eduduty" Type="int" />
+    <Property Name="researchduty" Type="int" />
+  </EntityType>
+  <EntityType Name="deliverytype">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="thetype" Type="varchar" MaxLength="20" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="statusnumber" Type="int" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="parentcode" Type="varchar" MaxLength="10" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="amount" Type="int" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="universitycode" Type="varchar" MaxLength="10" />
+    <Property Name="originalcode" Type="varchar" MaxLength="10" />
+    <Property Name="extensioncode" Type="varchar" MaxLength="120" />
+    <Property Name="levelextension" Type="int" />
+    <Property Name="managelevelcode" Type="varchar" MaxLength="10" />
+    <Property Name="address" Type="nvarchar" MaxLength="1000" />
+    <Property Name="regioncode" Type="varchar" MaxLength="10" />
+    <Property Name="foundeddate" Type="datetime" />
+    <Property Name="foundeddateshow" Type="varchar" MaxLength="20" />
+    <Property Name="syscomponentcode" Type="varchar" MaxLength="10" />
+    <Property Name="partneronly" Type="int" />
+  </EntityType>
+  <EntityType Name="evidence">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="2000" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="evidencetypecode" Type="varchar" MaxLength="10" />
+    <Property Name="storenote" Type="nvarchar" MaxLength="1000" />
+    <Property Name="thetype" Type="varchar" MaxLength="50" />
+    <Property Name="provincecodoe" Type="varchar" MaxLength="10" />
+    <Property Name="districtcode" Type="varchar" MaxLength="10" />
+    <Property Name="towncode" Type="varchar" MaxLength="10" />
+    <Property Name="departmentcode" Type="varchar" MaxLength="10" />
+    <Property Name="enquirer" Type="varchar" MaxLength="10" />
+    <Property Name="enquirername" Type="nvarchar" MaxLength="50" />
+    <Property Name="enquirertitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="address" Type="nvarchar" MaxLength="1000" />
+    <Property Name="phone" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="10" />
+    <Property Name="mailcode" Type="varchar" MaxLength="20" />
+    <Property Name="delivertypecode" Type="varchar" MaxLength="10" />
+    <Property Name="enquiringthime" Type="datetime" />
+    <Property Name="staffcode" Type="varchar" MaxLength="10" />
+    <Property Name="evidencestatus" Type="varchar" MaxLength="10" />
+    <Property Name="approvedstatus" Type="varchar" MaxLength="10" />
+    <Property Name="reponsivestaff" Type="varchar" MaxLength="10" />
+    <Property Name="result" Type="nvarchar" MaxLength="1000" />
+    <Property Name="duetime" Type="datetime" />
+    <Property Name="finishtime" Type="datetime" />
+    <Property Name="plustime" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="deliverytime" Type="datetime" />
+    <Property Name="deliverystaff" Type="varchar" MaxLength="10" />
+    <Property Name="deliverynote" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="evidencematerial">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="evidencecode" Type="varchar" MaxLength="10" />
+    <Property Name="materialcode" Type="varchar" MaxLength="10" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="quantitycode" Type="varchar" MaxLength="10" />
+    <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="pickupdate" Type="datetime" />
+    <Property Name="pickupextra" Type="int" />
+    <Property Name="remainamount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="returnamount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="storenote" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="evidencenote">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="evidencecode" Type="varchar" MaxLength="10" />
+    <Property Name="staffcode" Type="varchar" MaxLength="10" />
+    <Property Name="note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="approvedstatuscode" Type="varchar" MaxLength="10" />
+    <Property Name="notetime" Type="datetime" />
+    <Property Name="Thetype" Type="varchar" MaxLength="50" />
+    <Property Name="approvedstaff" Type="varchar" MaxLength="10" />
+    <Property Name="approvedtime" Type="datetime" />
+    <Property Name="evidencestatuscode" Type="varchar" MaxLength="10" />
+    <Property Name="approvednote" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="evidencestaff">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="evidencecode" Type="varchar" MaxLength="10" />
+    <Property Name="staffcode" Type="varchar" MaxLength="10" />
+    <Property Name="note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="role" Type="int" />
+    <Property Name="begintime" Type="datetime" />
+    <Property Name="endtime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="evidencestatus">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="thetype" Type="varchar" MaxLength="20" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="statusnumber" Type="int" />
+  </EntityType>
+  <EntityType Name="evidencetype">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="thetype" Type="varchar" MaxLength="50" />
+    <Property Name="inspectiontime" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="inspectionmaterial">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="evidencecode" Type="varchar" MaxLength="10" />
+    <Property Name="materialcode" Type="varchar" MaxLength="10" />
+    <Property Name="note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="quantitycode" Type="varchar" MaxLength="10" />
+    <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="pickupdate" Type="datetime" />
+    <Property Name="staffcode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="leveltitle">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="edureducerate" Type="int" />
+    <Property Name="researchreducerate" Type="int" />
+    <Property Name="eduduty" Type="int" />
+    <Property Name="researchduty" Type="int" />
+    <Property Name="man" Type="int" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="eduduty1" Type="int" />
+    <Property Name="researchduty1" Type="int" />
+  </EntityType>
+  <EntityType Name="managelevel">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="thetype" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="material">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="materialtype" Type="int" />
+    <Property Name="quantitycode" Type="varchar" MaxLength="10" />
+    <Property Name="quantityname" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="partyleveltitle">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="man" Type="int" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="eduduty1" Type="int" />
+    <Property Name="researchduty1" Type="int" />
+    <Property Name="edureducerate" Type="int" />
+    <Property Name="researchreducerate" Type="int" />
+    <Property Name="eduduty" Type="int" />
+    <Property Name="researchduty" Type="int" />
+  </EntityType>
+  <EntityType Name="quantity">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="Thetype" Type="varchar" MaxLength="50" />
+    <Property Name="basecode" Type="varchar" MaxLength="10" />
+    <Property Name="rate" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="region">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="comparelevel" Type="int" />
+    <Property Name="theorder" Type="int" />
+    <Property Name="thetype" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="varchar" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="note" Type="nvarchar(max)" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="birthday" Type="datetime" />
+    <Property Name="address" Type="nvarchar" MaxLength="400" />
+    <Property Name="academictitlecode" Type="varchar" MaxLength="10" />
+    <Property Name="degreecode" Type="varchar" MaxLength="10" />
+    <Property Name="leveltitlecode" Type="varchar" MaxLength="10" />
+    <Property Name="departmentcode" Type="varchar" MaxLength="10" />
+    <Property Name="armyrankcode" Type="varchar" MaxLength="10" />
+    <Property Name="partyleveltitlecode" Type="varchar" MaxLength="10" />
+    <Property Name="mobiphone" Type="varchar" MaxLength="20" />
+    <Property Name="tel" Type="varchar" MaxLength="20" />
+    <Property Name="userpassword" Type="varchar" MaxLength="100" />
+    <Property Name="photo" Type="nvarchar" MaxLength="200" />
+    <Property Name="manager" Type="int" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" />
+    <Property Name="changepass" Type="smallint" />
+    <Property Name="academiclevelcode" Type="varchar" MaxLength="10" />
+    <Property Name="staffstatuscode" Type="varchar" MaxLength="10" />
+    <Property Name="provincecode" Type="varchar" MaxLength="10" />
+    <Property Name="districtcode" Type="varchar" MaxLength="10" />
+    <Property Name="towncode" Type="varchar" MaxLength="10" />
+    <Property Name="internalemail" Type="nvarchar" MaxLength="100" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="sex" Type="int" />
+    <Property Name="ethniccode" Type="varchar" MaxLength="10" />
+    <Property Name="religioncode" Type="varchar" MaxLength="10" />
+    <Property Name="hometown" Type="nvarchar" MaxLength="500" />
+    <Property Name="username" Type="nvarchar" MaxLength="100" />
+    <Property Name="universitycode" Type="varchar" MaxLength="10" />
+    <Property Name="civilid" Type="varchar" MaxLength="50" />
+    <Property Name="extensioncode" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="staffstatus">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codeview" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="edittime" Type="datetime" />
+    <Property Name="edituser" Type="varchar" MaxLength="20" />
+    <Property Name="lock" Type="smallint" />
+    <Property Name="lockdate" Type="datetime" />
+    <Property Name="whois" Type="varchar" MaxLength="64" />
+    <Property Name="isstaff" Type="int" />
+    <Property Name="theorder" Type="int" />
+  </EntityType>
+  <EntityContainer Name="EIMSModelStoreContainer">
+    <EntitySet Name="academiclevel" EntityType="Self.academiclevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="academictitle" EntityType="Self.academictitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppConfig" EntityType="Self.AppConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="approvedstatus" EntityType="Self.approvedstatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="armyrank" EntityType="Self.armyrank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="degree" EntityType="Self.degree" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="deliverytype" EntityType="Self.deliverytype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="evidence" EntityType="Self.evidence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="evidencematerial" EntityType="Self.evidencematerial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="evidencenote" EntityType="Self.evidencenote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="evidencestaff" EntityType="Self.evidencestaff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="evidencestatus" EntityType="Self.evidencestatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="evidencetype" EntityType="Self.evidencetype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inspectionmaterial" EntityType="Self.inspectionmaterial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="leveltitle" EntityType="Self.leveltitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="managelevel" EntityType="Self.managelevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="material" EntityType="Self.material" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="partyleveltitle" EntityType="Self.partyleveltitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="quantity" EntityType="Self.quantity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="region" EntityType="Self.region" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="staff" EntityType="Self.staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="staffstatus" EntityType="Self.staffstatus" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

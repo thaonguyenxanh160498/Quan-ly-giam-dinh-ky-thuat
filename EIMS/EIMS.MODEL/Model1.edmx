@@ -1,0 +1,1578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EIMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="academiclevel">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="edureducerate" Type="int" />
+          <Property Name="researchreducerate" Type="int" />
+          <Property Name="eduduty" Type="int" />
+          <Property Name="researchduty" Type="int" />
+          <Property Name="eduduty1" Type="int" />
+          <Property Name="researchduty1" Type="int" />
+        </EntityType>
+        <EntityType Name="academictitle">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="eduduty1" Type="int" />
+          <Property Name="researchduty1" Type="int" />
+          <Property Name="rate" Type="float" />
+          <Property Name="edureducerate" Type="int" />
+          <Property Name="researchreducerate" Type="int" />
+          <Property Name="eduduty" Type="int" />
+          <Property Name="researchduty" Type="int" />
+        </EntityType>
+        <EntityType Name="AppConfig">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ImageLogin" Type="nvarchar(max)" />
+          <Property Name="ImagePanelLogin" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="approvedstatus">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="thetype" Type="varchar" MaxLength="20" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="statusnumber" Type="int" />
+        </EntityType>
+        <EntityType Name="armyrank">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="edureducerate" Type="int" />
+          <Property Name="researchreducerate" Type="int" />
+          <Property Name="eduduty" Type="int" />
+          <Property Name="researchduty" Type="int" />
+          <Property Name="eduduty1" Type="int" />
+          <Property Name="researchduty1" Type="int" />
+        </EntityType>
+        <EntityType Name="degree">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="eduduty1" Type="int" />
+          <Property Name="researchduty1" Type="int" />
+          <Property Name="rate" Type="float" />
+          <Property Name="edureducerate" Type="int" />
+          <Property Name="researchreducerate" Type="int" />
+          <Property Name="eduduty" Type="int" />
+          <Property Name="researchduty" Type="int" />
+        </EntityType>
+        <EntityType Name="deliverytype">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="thetype" Type="varchar" MaxLength="20" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="statusnumber" Type="int" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="parentcode" Type="varchar" MaxLength="10" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="amount" Type="int" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="universitycode" Type="varchar" MaxLength="10" />
+          <Property Name="originalcode" Type="varchar" MaxLength="10" />
+          <Property Name="extensioncode" Type="varchar" MaxLength="120" />
+          <Property Name="levelextension" Type="int" />
+          <Property Name="managelevelcode" Type="varchar" MaxLength="10" />
+          <Property Name="address" Type="nvarchar" MaxLength="1000" />
+          <Property Name="regioncode" Type="varchar" MaxLength="10" />
+          <Property Name="foundeddate" Type="datetime" />
+          <Property Name="foundeddateshow" Type="varchar" MaxLength="20" />
+          <Property Name="syscomponentcode" Type="varchar" MaxLength="10" />
+          <Property Name="partneronly" Type="int" />
+        </EntityType>
+        <EntityType Name="evidence">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="2000" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="evidencetypecode" Type="varchar" MaxLength="10" />
+          <Property Name="storenote" Type="nvarchar" MaxLength="1000" />
+          <Property Name="thetype" Type="varchar" MaxLength="50" />
+          <Property Name="provincecodoe" Type="varchar" MaxLength="10" />
+          <Property Name="districtcode" Type="varchar" MaxLength="10" />
+          <Property Name="towncode" Type="varchar" MaxLength="10" />
+          <Property Name="departmentcode" Type="varchar" MaxLength="10" />
+          <Property Name="enquirer" Type="varchar" MaxLength="10" />
+          <Property Name="enquirername" Type="nvarchar" MaxLength="50" />
+          <Property Name="enquirertitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="address" Type="nvarchar" MaxLength="1000" />
+          <Property Name="phone" Type="varchar" MaxLength="20" />
+          <Property Name="email" Type="varchar" MaxLength="10" />
+          <Property Name="mailcode" Type="varchar" MaxLength="20" />
+          <Property Name="delivertypecode" Type="varchar" MaxLength="10" />
+          <Property Name="enquiringthime" Type="datetime" />
+          <Property Name="staffcode" Type="varchar" MaxLength="10" />
+          <Property Name="evidencestatus" Type="varchar" MaxLength="10" />
+          <Property Name="approvedstatus" Type="varchar" MaxLength="10" />
+          <Property Name="reponsivestaff" Type="varchar" MaxLength="10" />
+          <Property Name="result" Type="nvarchar" MaxLength="1000" />
+          <Property Name="duetime" Type="datetime" />
+          <Property Name="finishtime" Type="datetime" />
+          <Property Name="plustime" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="deliverytime" Type="datetime" />
+          <Property Name="deliverystaff" Type="varchar" MaxLength="10" />
+          <Property Name="deliverynote" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="evidencematerial">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="evidencecode" Type="varchar" MaxLength="10" />
+          <Property Name="materialcode" Type="varchar" MaxLength="10" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="1000" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="quantitycode" Type="varchar" MaxLength="10" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="pickupdate" Type="datetime" />
+          <Property Name="pickupextra" Type="int" />
+          <Property Name="remainamount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="returnamount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="storenote" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="evidencenote">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="evidencecode" Type="varchar" MaxLength="10" />
+          <Property Name="staffcode" Type="varchar" MaxLength="10" />
+          <Property Name="note" Type="nvarchar" MaxLength="1000" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="approvedstatuscode" Type="varchar" MaxLength="10" />
+          <Property Name="notetime" Type="datetime" />
+          <Property Name="Thetype" Type="varchar" MaxLength="50" />
+          <Property Name="approvedstaff" Type="varchar" MaxLength="10" />
+          <Property Name="approvedtime" Type="datetime" />
+          <Property Name="evidencestatuscode" Type="varchar" MaxLength="10" />
+          <Property Name="approvednote" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="evidencestaff">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="evidencecode" Type="varchar" MaxLength="10" />
+          <Property Name="staffcode" Type="varchar" MaxLength="10" />
+          <Property Name="note" Type="nvarchar" MaxLength="1000" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="role" Type="int" />
+          <Property Name="begintime" Type="datetime" />
+          <Property Name="endtime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="evidencestatus">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="thetype" Type="varchar" MaxLength="20" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="statusnumber" Type="int" />
+        </EntityType>
+        <EntityType Name="evidencetype">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="thetype" Type="varchar" MaxLength="50" />
+          <Property Name="inspectiontime" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="inspectionmaterial">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="evidencecode" Type="varchar" MaxLength="10" />
+          <Property Name="materialcode" Type="varchar" MaxLength="10" />
+          <Property Name="note" Type="nvarchar" MaxLength="1000" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="quantitycode" Type="varchar" MaxLength="10" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="pickupdate" Type="datetime" />
+          <Property Name="staffcode" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="leveltitle">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="edureducerate" Type="int" />
+          <Property Name="researchreducerate" Type="int" />
+          <Property Name="eduduty" Type="int" />
+          <Property Name="researchduty" Type="int" />
+          <Property Name="man" Type="int" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="eduduty1" Type="int" />
+          <Property Name="researchduty1" Type="int" />
+        </EntityType>
+        <EntityType Name="managelevel">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="thetype" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="material">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="materialtype" Type="int" />
+          <Property Name="quantitycode" Type="varchar" MaxLength="10" />
+          <Property Name="quantityname" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="partyleveltitle">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="man" Type="int" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="eduduty1" Type="int" />
+          <Property Name="researchduty1" Type="int" />
+          <Property Name="edureducerate" Type="int" />
+          <Property Name="researchreducerate" Type="int" />
+          <Property Name="eduduty" Type="int" />
+          <Property Name="researchduty" Type="int" />
+        </EntityType>
+        <EntityType Name="quantity">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="Thetype" Type="varchar" MaxLength="50" />
+          <Property Name="basecode" Type="varchar" MaxLength="10" />
+          <Property Name="rate" Type="decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="region">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar" MaxLength="200" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="comparelevel" Type="int" />
+          <Property Name="theorder" Type="int" />
+          <Property Name="thetype" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="note" Type="nvarchar(max)" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="birthday" Type="datetime" />
+          <Property Name="address" Type="nvarchar" MaxLength="400" />
+          <Property Name="academictitlecode" Type="varchar" MaxLength="10" />
+          <Property Name="degreecode" Type="varchar" MaxLength="10" />
+          <Property Name="leveltitlecode" Type="varchar" MaxLength="10" />
+          <Property Name="departmentcode" Type="varchar" MaxLength="10" />
+          <Property Name="armyrankcode" Type="varchar" MaxLength="10" />
+          <Property Name="partyleveltitlecode" Type="varchar" MaxLength="10" />
+          <Property Name="mobiphone" Type="varchar" MaxLength="20" />
+          <Property Name="tel" Type="varchar" MaxLength="20" />
+          <Property Name="userpassword" Type="varchar" MaxLength="100" />
+          <Property Name="photo" Type="nvarchar" MaxLength="200" />
+          <Property Name="manager" Type="int" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="changepass" Type="smallint" />
+          <Property Name="academiclevelcode" Type="varchar" MaxLength="10" />
+          <Property Name="staffstatuscode" Type="varchar" MaxLength="10" />
+          <Property Name="provincecode" Type="varchar" MaxLength="10" />
+          <Property Name="districtcode" Type="varchar" MaxLength="10" />
+          <Property Name="towncode" Type="varchar" MaxLength="10" />
+          <Property Name="internalemail" Type="nvarchar" MaxLength="100" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="sex" Type="int" />
+          <Property Name="ethniccode" Type="varchar" MaxLength="10" />
+          <Property Name="religioncode" Type="varchar" MaxLength="10" />
+          <Property Name="hometown" Type="nvarchar" MaxLength="500" />
+          <Property Name="username" Type="nvarchar" MaxLength="100" />
+          <Property Name="universitycode" Type="varchar" MaxLength="10" />
+          <Property Name="civilid" Type="varchar" MaxLength="50" />
+          <Property Name="extensioncode" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="staffstatus">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="codeview" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="edittime" Type="datetime" />
+          <Property Name="edituser" Type="varchar" MaxLength="20" />
+          <Property Name="lock" Type="smallint" />
+          <Property Name="lockdate" Type="datetime" />
+          <Property Name="whois" Type="varchar" MaxLength="64" />
+          <Property Name="isstaff" Type="int" />
+          <Property Name="theorder" Type="int" />
+        </EntityType>
+        <EntityContainer Name="EIMSModelStoreContainer">
+          <EntitySet Name="academiclevel" EntityType="Self.academiclevel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="academictitle" EntityType="Self.academictitle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AppConfig" EntityType="Self.AppConfig" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="approvedstatus" EntityType="Self.approvedstatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="armyrank" EntityType="Self.armyrank" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="degree" EntityType="Self.degree" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="deliverytype" EntityType="Self.deliverytype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="evidence" EntityType="Self.evidence" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="evidencematerial" EntityType="Self.evidencematerial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="evidencenote" EntityType="Self.evidencenote" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="evidencestaff" EntityType="Self.evidencestaff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="evidencestatus" EntityType="Self.evidencestatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="evidencetype" EntityType="Self.evidencetype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inspectionmaterial" EntityType="Self.inspectionmaterial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="leveltitle" EntityType="Self.leveltitle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="managelevel" EntityType="Self.managelevel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="material" EntityType="Self.material" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="partyleveltitle" EntityType="Self.partyleveltitle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="quantity" EntityType="Self.quantity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="region" EntityType="Self.region" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="staff" EntityType="Self.staff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="staffstatus" EntityType="Self.staffstatus" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EIMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="academiclevel">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="edureducerate" Type="Int32" />
+          <Property Name="researchreducerate" Type="Int32" />
+          <Property Name="eduduty" Type="Int32" />
+          <Property Name="researchduty" Type="Int32" />
+          <Property Name="eduduty1" Type="Int32" />
+          <Property Name="researchduty1" Type="Int32" />
+        </EntityType>
+        <EntityType Name="academictitle">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="eduduty1" Type="Int32" />
+          <Property Name="researchduty1" Type="Int32" />
+          <Property Name="rate" Type="Double" />
+          <Property Name="edureducerate" Type="Int32" />
+          <Property Name="researchreducerate" Type="Int32" />
+          <Property Name="eduduty" Type="Int32" />
+          <Property Name="researchduty" Type="Int32" />
+        </EntityType>
+        <EntityType Name="approvedstatu">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="thetype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="statusnumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="armyrank">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="edureducerate" Type="Int32" />
+          <Property Name="researchreducerate" Type="Int32" />
+          <Property Name="eduduty" Type="Int32" />
+          <Property Name="researchduty" Type="Int32" />
+          <Property Name="eduduty1" Type="Int32" />
+          <Property Name="researchduty1" Type="Int32" />
+        </EntityType>
+        <EntityType Name="degree">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="eduduty1" Type="Int32" />
+          <Property Name="researchduty1" Type="Int32" />
+          <Property Name="rate" Type="Double" />
+          <Property Name="edureducerate" Type="Int32" />
+          <Property Name="researchreducerate" Type="Int32" />
+          <Property Name="eduduty" Type="Int32" />
+          <Property Name="researchduty" Type="Int32" />
+        </EntityType>
+        <EntityType Name="deliverytype">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="thetype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="statusnumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="parentcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="amount" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="universitycode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="originalcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="extensioncode" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="levelextension" Type="Int32" />
+          <Property Name="managelevelcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="regioncode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="foundeddate" Type="DateTime" Precision="3" />
+          <Property Name="foundeddateshow" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="syscomponentcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="partneronly" Type="Int32" />
+        </EntityType>
+        <EntityType Name="evidence">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="evidencetypecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="storenote" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="thetype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="provincecodoe" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="districtcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="towncode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="departmentcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="enquirer" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="enquirername" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="enquirertitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="mailcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="delivertypecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="enquiringthime" Type="DateTime" Precision="3" />
+          <Property Name="staffcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="evidencestatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="approvedstatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="reponsivestaff" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="result" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="duetime" Type="DateTime" Precision="3" />
+          <Property Name="finishtime" Type="DateTime" Precision="3" />
+          <Property Name="plustime" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="deliverytime" Type="DateTime" Precision="3" />
+          <Property Name="deliverystaff" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="deliverynote" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="evidencematerial">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="evidencecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="materialcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="quantitycode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="pickupdate" Type="DateTime" Precision="3" />
+          <Property Name="pickupextra" Type="Int32" />
+          <Property Name="remainamount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="returnamount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="storenote" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="evidencenote">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="evidencecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="staffcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="approvedstatuscode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="notetime" Type="DateTime" Precision="3" />
+          <Property Name="Thetype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="approvedstaff" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="approvedtime" Type="DateTime" Precision="3" />
+          <Property Name="evidencestatuscode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="approvednote" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="evidencestaff">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="evidencecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="staffcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="role" Type="Int32" />
+          <Property Name="begintime" Type="DateTime" Precision="3" />
+          <Property Name="endtime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="evidencestatu">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="thetype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="statusnumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="evidencetype">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="thetype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="inspectiontime" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="inspectionmaterial">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="evidencecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="materialcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="quantitycode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="pickupdate" Type="DateTime" Precision="3" />
+          <Property Name="staffcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="leveltitle">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="edureducerate" Type="Int32" />
+          <Property Name="researchreducerate" Type="Int32" />
+          <Property Name="eduduty" Type="Int32" />
+          <Property Name="researchduty" Type="Int32" />
+          <Property Name="man" Type="Int32" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="eduduty1" Type="Int32" />
+          <Property Name="researchduty1" Type="Int32" />
+        </EntityType>
+        <EntityType Name="managelevel">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="thetype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="material">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="materialtype" Type="Int32" />
+          <Property Name="quantitycode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="quantityname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="partyleveltitle">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="man" Type="Int32" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="eduduty1" Type="Int32" />
+          <Property Name="researchduty1" Type="Int32" />
+          <Property Name="edureducerate" Type="Int32" />
+          <Property Name="researchreducerate" Type="Int32" />
+          <Property Name="eduduty" Type="Int32" />
+          <Property Name="researchduty" Type="Int32" />
+        </EntityType>
+        <EntityType Name="quantity">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="Thetype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="basecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="rate" Type="Decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="region">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="comparelevel" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+          <Property Name="thetype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="birthday" Type="DateTime" Precision="3" />
+          <Property Name="address" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="academictitlecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="degreecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="leveltitlecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="departmentcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="armyrankcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="partyleveltitlecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="mobiphone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="userpassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="photo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="manager" Type="Int32" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="changepass" Type="Int16" />
+          <Property Name="academiclevelcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="staffstatuscode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="provincecode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="districtcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="towncode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="internalemail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="sex" Type="Int32" />
+          <Property Name="ethniccode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="religioncode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="hometown" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="universitycode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="civilid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="extensioncode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="staffstatu">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeview" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="edittime" Type="DateTime" Precision="3" />
+          <Property Name="edituser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="lock" Type="Int16" />
+          <Property Name="lockdate" Type="DateTime" Precision="3" />
+          <Property Name="whois" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="isstaff" Type="Int32" />
+          <Property Name="theorder" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="EIMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="academiclevels" EntityType="Self.academiclevel" />
+          <EntitySet Name="academictitles" EntityType="Self.academictitle" />
+          <EntitySet Name="approvedstatus" EntityType="Self.approvedstatu" />
+          <EntitySet Name="armyranks" EntityType="Self.armyrank" />
+          <EntitySet Name="degrees" EntityType="Self.degree" />
+          <EntitySet Name="deliverytypes" EntityType="Self.deliverytype" />
+          <EntitySet Name="departments" EntityType="Self.department" />
+          <EntitySet Name="evidences" EntityType="Self.evidence" />
+          <EntitySet Name="evidencematerials" EntityType="Self.evidencematerial" />
+          <EntitySet Name="evidencenotes" EntityType="Self.evidencenote" />
+          <EntitySet Name="evidencestaffs" EntityType="Self.evidencestaff" />
+          <EntitySet Name="evidencestatus" EntityType="Self.evidencestatu" />
+          <EntitySet Name="evidencetypes" EntityType="Self.evidencetype" />
+          <EntitySet Name="inspectionmaterials" EntityType="Self.inspectionmaterial" />
+          <EntitySet Name="leveltitles" EntityType="Self.leveltitle" />
+          <EntitySet Name="managelevels" EntityType="Self.managelevel" />
+          <EntitySet Name="materials" EntityType="Self.material" />
+          <EntitySet Name="partyleveltitles" EntityType="Self.partyleveltitle" />
+          <EntitySet Name="quantities" EntityType="Self.quantity" />
+          <EntitySet Name="regions" EntityType="Self.region" />
+          <EntitySet Name="staffs" EntityType="Self.staff" />
+          <EntitySet Name="staffstatus" EntityType="Self.staffstatu" />
+          <EntitySet Name="AppConfigs" EntityType="EIMSModel.AppConfig" />
+        </EntityContainer>
+        <EntityType Name="AppConfig">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImageLogin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImagePanelLogin" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EIMSModelStoreContainer" CdmEntityContainer="EIMSEntities">
+          <EntitySetMapping Name="academiclevels">
+            <EntityTypeMapping TypeName="EIMSModel.academiclevel">
+              <MappingFragment StoreEntitySet="academiclevel">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+                <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+                <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+                <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+                <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+                <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="academictitles">
+            <EntityTypeMapping TypeName="EIMSModel.academictitle">
+              <MappingFragment StoreEntitySet="academictitle">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+                <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
+                <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+                <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+                <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+                <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="approvedstatus">
+            <EntityTypeMapping TypeName="EIMSModel.approvedstatu">
+              <MappingFragment StoreEntitySet="approvedstatus">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="thetype" ColumnName="thetype" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="statusnumber" ColumnName="statusnumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="armyranks">
+            <EntityTypeMapping TypeName="EIMSModel.armyrank">
+              <MappingFragment StoreEntitySet="armyrank">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+                <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+                <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+                <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+                <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+                <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="degrees">
+            <EntityTypeMapping TypeName="EIMSModel.degree">
+              <MappingFragment StoreEntitySet="degree">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+                <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
+                <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+                <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+                <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+                <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="deliverytypes">
+            <EntityTypeMapping TypeName="EIMSModel.deliverytype">
+              <MappingFragment StoreEntitySet="deliverytype">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="thetype" ColumnName="thetype" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="statusnumber" ColumnName="statusnumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="departments">
+            <EntityTypeMapping TypeName="EIMSModel.department">
+              <MappingFragment StoreEntitySet="department">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="parentcode" ColumnName="parentcode" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="universitycode" ColumnName="universitycode" />
+                <ScalarProperty Name="originalcode" ColumnName="originalcode" />
+                <ScalarProperty Name="extensioncode" ColumnName="extensioncode" />
+                <ScalarProperty Name="levelextension" ColumnName="levelextension" />
+                <ScalarProperty Name="managelevelcode" ColumnName="managelevelcode" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="regioncode" ColumnName="regioncode" />
+                <ScalarProperty Name="foundeddate" ColumnName="foundeddate" />
+                <ScalarProperty Name="foundeddateshow" ColumnName="foundeddateshow" />
+                <ScalarProperty Name="syscomponentcode" ColumnName="syscomponentcode" />
+                <ScalarProperty Name="partneronly" ColumnName="partneronly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="evidences">
+            <EntityTypeMapping TypeName="EIMSModel.evidence">
+              <MappingFragment StoreEntitySet="evidence">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="evidencetypecode" ColumnName="evidencetypecode" />
+                <ScalarProperty Name="storenote" ColumnName="storenote" />
+                <ScalarProperty Name="thetype" ColumnName="thetype" />
+                <ScalarProperty Name="provincecodoe" ColumnName="provincecodoe" />
+                <ScalarProperty Name="districtcode" ColumnName="districtcode" />
+                <ScalarProperty Name="towncode" ColumnName="towncode" />
+                <ScalarProperty Name="departmentcode" ColumnName="departmentcode" />
+                <ScalarProperty Name="enquirer" ColumnName="enquirer" />
+                <ScalarProperty Name="enquirername" ColumnName="enquirername" />
+                <ScalarProperty Name="enquirertitle" ColumnName="enquirertitle" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mailcode" ColumnName="mailcode" />
+                <ScalarProperty Name="delivertypecode" ColumnName="delivertypecode" />
+                <ScalarProperty Name="enquiringthime" ColumnName="enquiringthime" />
+                <ScalarProperty Name="staffcode" ColumnName="staffcode" />
+                <ScalarProperty Name="evidencestatus" ColumnName="evidencestatus" />
+                <ScalarProperty Name="approvedstatus" ColumnName="approvedstatus" />
+                <ScalarProperty Name="reponsivestaff" ColumnName="reponsivestaff" />
+                <ScalarProperty Name="result" ColumnName="result" />
+                <ScalarProperty Name="duetime" ColumnName="duetime" />
+                <ScalarProperty Name="finishtime" ColumnName="finishtime" />
+                <ScalarProperty Name="plustime" ColumnName="plustime" />
+                <ScalarProperty Name="deliverytime" ColumnName="deliverytime" />
+                <ScalarProperty Name="deliverystaff" ColumnName="deliverystaff" />
+                <ScalarProperty Name="deliverynote" ColumnName="deliverynote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="evidencematerials">
+            <EntityTypeMapping TypeName="EIMSModel.evidencematerial">
+              <MappingFragment StoreEntitySet="evidencematerial">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="evidencecode" ColumnName="evidencecode" />
+                <ScalarProperty Name="materialcode" ColumnName="materialcode" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="quantitycode" ColumnName="quantitycode" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="pickupdate" ColumnName="pickupdate" />
+                <ScalarProperty Name="pickupextra" ColumnName="pickupextra" />
+                <ScalarProperty Name="remainamount" ColumnName="remainamount" />
+                <ScalarProperty Name="returnamount" ColumnName="returnamount" />
+                <ScalarProperty Name="storenote" ColumnName="storenote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="evidencenotes">
+            <EntityTypeMapping TypeName="EIMSModel.evidencenote">
+              <MappingFragment StoreEntitySet="evidencenote">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="evidencecode" ColumnName="evidencecode" />
+                <ScalarProperty Name="staffcode" ColumnName="staffcode" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="approvedstatuscode" ColumnName="approvedstatuscode" />
+                <ScalarProperty Name="notetime" ColumnName="notetime" />
+                <ScalarProperty Name="Thetype" ColumnName="Thetype" />
+                <ScalarProperty Name="approvedstaff" ColumnName="approvedstaff" />
+                <ScalarProperty Name="approvedtime" ColumnName="approvedtime" />
+                <ScalarProperty Name="evidencestatuscode" ColumnName="evidencestatuscode" />
+                <ScalarProperty Name="approvednote" ColumnName="approvednote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="evidencestaffs">
+            <EntityTypeMapping TypeName="EIMSModel.evidencestaff">
+              <MappingFragment StoreEntitySet="evidencestaff">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="evidencecode" ColumnName="evidencecode" />
+                <ScalarProperty Name="staffcode" ColumnName="staffcode" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="begintime" ColumnName="begintime" />
+                <ScalarProperty Name="endtime" ColumnName="endtime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="evidencestatus">
+            <EntityTypeMapping TypeName="EIMSModel.evidencestatu">
+              <MappingFragment StoreEntitySet="evidencestatus">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="thetype" ColumnName="thetype" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="statusnumber" ColumnName="statusnumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="evidencetypes">
+            <EntityTypeMapping TypeName="EIMSModel.evidencetype">
+              <MappingFragment StoreEntitySet="evidencetype">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="thetype" ColumnName="thetype" />
+                <ScalarProperty Name="inspectiontime" ColumnName="inspectiontime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inspectionmaterials">
+            <EntityTypeMapping TypeName="EIMSModel.inspectionmaterial">
+              <MappingFragment StoreEntitySet="inspectionmaterial">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="evidencecode" ColumnName="evidencecode" />
+                <ScalarProperty Name="materialcode" ColumnName="materialcode" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="quantitycode" ColumnName="quantitycode" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="pickupdate" ColumnName="pickupdate" />
+                <ScalarProperty Name="staffcode" ColumnName="staffcode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="leveltitles">
+            <EntityTypeMapping TypeName="EIMSModel.leveltitle">
+              <MappingFragment StoreEntitySet="leveltitle">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+                <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+                <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+                <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+                <ScalarProperty Name="man" ColumnName="man" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+                <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="managelevels">
+            <EntityTypeMapping TypeName="EIMSModel.managelevel">
+              <MappingFragment StoreEntitySet="managelevel">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="thetype" ColumnName="thetype" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="materials">
+            <EntityTypeMapping TypeName="EIMSModel.material">
+              <MappingFragment StoreEntitySet="material">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="materialtype" ColumnName="materialtype" />
+                <ScalarProperty Name="quantitycode" ColumnName="quantitycode" />
+                <ScalarProperty Name="quantityname" ColumnName="quantityname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="partyleveltitles">
+            <EntityTypeMapping TypeName="EIMSModel.partyleveltitle">
+              <MappingFragment StoreEntitySet="partyleveltitle">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="man" ColumnName="man" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+                <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+                <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+                <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+                <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+                <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="quantities">
+            <EntityTypeMapping TypeName="EIMSModel.quantity">
+              <MappingFragment StoreEntitySet="quantity">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="Thetype" ColumnName="Thetype" />
+                <ScalarProperty Name="basecode" ColumnName="basecode" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="regions">
+            <EntityTypeMapping TypeName="EIMSModel.region">
+              <MappingFragment StoreEntitySet="region">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+                <ScalarProperty Name="thetype" ColumnName="thetype" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="staffs">
+            <EntityTypeMapping TypeName="EIMSModel.staff">
+              <MappingFragment StoreEntitySet="staff">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="academictitlecode" ColumnName="academictitlecode" />
+                <ScalarProperty Name="degreecode" ColumnName="degreecode" />
+                <ScalarProperty Name="leveltitlecode" ColumnName="leveltitlecode" />
+                <ScalarProperty Name="departmentcode" ColumnName="departmentcode" />
+                <ScalarProperty Name="armyrankcode" ColumnName="armyrankcode" />
+                <ScalarProperty Name="partyleveltitlecode" ColumnName="partyleveltitlecode" />
+                <ScalarProperty Name="mobiphone" ColumnName="mobiphone" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="userpassword" ColumnName="userpassword" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="changepass" ColumnName="changepass" />
+                <ScalarProperty Name="academiclevelcode" ColumnName="academiclevelcode" />
+                <ScalarProperty Name="staffstatuscode" ColumnName="staffstatuscode" />
+                <ScalarProperty Name="provincecode" ColumnName="provincecode" />
+                <ScalarProperty Name="districtcode" ColumnName="districtcode" />
+                <ScalarProperty Name="towncode" ColumnName="towncode" />
+                <ScalarProperty Name="internalemail" ColumnName="internalemail" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="ethniccode" ColumnName="ethniccode" />
+                <ScalarProperty Name="religioncode" ColumnName="religioncode" />
+                <ScalarProperty Name="hometown" ColumnName="hometown" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="universitycode" ColumnName="universitycode" />
+                <ScalarProperty Name="civilid" ColumnName="civilid" />
+                <ScalarProperty Name="extensioncode" ColumnName="extensioncode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="staffstatus">
+            <EntityTypeMapping TypeName="EIMSModel.staffstatu">
+              <MappingFragment StoreEntitySet="staffstatus">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="codeview" ColumnName="codeview" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="edittime" ColumnName="edittime" />
+                <ScalarProperty Name="edituser" ColumnName="edituser" />
+                <ScalarProperty Name="lock" ColumnName="lock" />
+                <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+                <ScalarProperty Name="whois" ColumnName="whois" />
+                <ScalarProperty Name="isstaff" ColumnName="isstaff" />
+                <ScalarProperty Name="theorder" ColumnName="theorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppConfigs">
+            <EntityTypeMapping TypeName="EIMSModel.AppConfig">
+              <MappingFragment StoreEntitySet="AppConfig">
+                <ScalarProperty Name="ImagePanelLogin" ColumnName="ImagePanelLogin" />
+                <ScalarProperty Name="ImageLogin" ColumnName="ImageLogin" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

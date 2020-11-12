@@ -1,0 +1,10 @@
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\bin\Debug\EIMS.MODEL.dll.config
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\bin\Debug\EIMS.MODEL.dll
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\bin\Debug\EIMS.MODEL.pdb
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\obj\Debug\EIMS.MODEL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\obj\Debug\EIMS.MODEL.dll
+C:\Users\Admin\Desktop\EIMC\eims\EIMS\EIMS.MODEL\obj\Debug\EIMS.MODEL.pdb

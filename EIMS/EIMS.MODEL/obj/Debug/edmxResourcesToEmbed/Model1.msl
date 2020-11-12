@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EIMSModelStoreContainer" CdmEntityContainer="EIMSEntities">
+    <EntitySetMapping Name="academiclevels">
+      <EntityTypeMapping TypeName="EIMSModel.academiclevel">
+        <MappingFragment StoreEntitySet="academiclevel">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+          <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+          <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+          <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+          <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+          <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="academictitles">
+      <EntityTypeMapping TypeName="EIMSModel.academictitle">
+        <MappingFragment StoreEntitySet="academictitle">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+          <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+          <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+          <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+          <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="approvedstatus">
+      <EntityTypeMapping TypeName="EIMSModel.approvedstatu">
+        <MappingFragment StoreEntitySet="approvedstatus">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="thetype" ColumnName="thetype" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="statusnumber" ColumnName="statusnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="armyranks">
+      <EntityTypeMapping TypeName="EIMSModel.armyrank">
+        <MappingFragment StoreEntitySet="armyrank">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+          <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+          <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+          <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+          <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+          <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="degrees">
+      <EntityTypeMapping TypeName="EIMSModel.degree">
+        <MappingFragment StoreEntitySet="degree">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+          <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+          <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+          <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+          <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deliverytypes">
+      <EntityTypeMapping TypeName="EIMSModel.deliverytype">
+        <MappingFragment StoreEntitySet="deliverytype">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="thetype" ColumnName="thetype" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="statusnumber" ColumnName="statusnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="EIMSModel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="parentcode" ColumnName="parentcode" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="universitycode" ColumnName="universitycode" />
+          <ScalarProperty Name="originalcode" ColumnName="originalcode" />
+          <ScalarProperty Name="extensioncode" ColumnName="extensioncode" />
+          <ScalarProperty Name="levelextension" ColumnName="levelextension" />
+          <ScalarProperty Name="managelevelcode" ColumnName="managelevelcode" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="regioncode" ColumnName="regioncode" />
+          <ScalarProperty Name="foundeddate" ColumnName="foundeddate" />
+          <ScalarProperty Name="foundeddateshow" ColumnName="foundeddateshow" />
+          <ScalarProperty Name="syscomponentcode" ColumnName="syscomponentcode" />
+          <ScalarProperty Name="partneronly" ColumnName="partneronly" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evidences">
+      <EntityTypeMapping TypeName="EIMSModel.evidence">
+        <MappingFragment StoreEntitySet="evidence">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="evidencetypecode" ColumnName="evidencetypecode" />
+          <ScalarProperty Name="storenote" ColumnName="storenote" />
+          <ScalarProperty Name="thetype" ColumnName="thetype" />
+          <ScalarProperty Name="provincecodoe" ColumnName="provincecodoe" />
+          <ScalarProperty Name="districtcode" ColumnName="districtcode" />
+          <ScalarProperty Name="towncode" ColumnName="towncode" />
+          <ScalarProperty Name="departmentcode" ColumnName="departmentcode" />
+          <ScalarProperty Name="enquirer" ColumnName="enquirer" />
+          <ScalarProperty Name="enquirername" ColumnName="enquirername" />
+          <ScalarProperty Name="enquirertitle" ColumnName="enquirertitle" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mailcode" ColumnName="mailcode" />
+          <ScalarProperty Name="delivertypecode" ColumnName="delivertypecode" />
+          <ScalarProperty Name="enquiringthime" ColumnName="enquiringthime" />
+          <ScalarProperty Name="staffcode" ColumnName="staffcode" />
+          <ScalarProperty Name="evidencestatus" ColumnName="evidencestatus" />
+          <ScalarProperty Name="approvedstatus" ColumnName="approvedstatus" />
+          <ScalarProperty Name="reponsivestaff" ColumnName="reponsivestaff" />
+          <ScalarProperty Name="result" ColumnName="result" />
+          <ScalarProperty Name="duetime" ColumnName="duetime" />
+          <ScalarProperty Name="finishtime" ColumnName="finishtime" />
+          <ScalarProperty Name="plustime" ColumnName="plustime" />
+          <ScalarProperty Name="deliverytime" ColumnName="deliverytime" />
+          <ScalarProperty Name="deliverystaff" ColumnName="deliverystaff" />
+          <ScalarProperty Name="deliverynote" ColumnName="deliverynote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evidencematerials">
+      <EntityTypeMapping TypeName="EIMSModel.evidencematerial">
+        <MappingFragment StoreEntitySet="evidencematerial">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="evidencecode" ColumnName="evidencecode" />
+          <ScalarProperty Name="materialcode" ColumnName="materialcode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="quantitycode" ColumnName="quantitycode" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="pickupdate" ColumnName="pickupdate" />
+          <ScalarProperty Name="pickupextra" ColumnName="pickupextra" />
+          <ScalarProperty Name="remainamount" ColumnName="remainamount" />
+          <ScalarProperty Name="returnamount" ColumnName="returnamount" />
+          <ScalarProperty Name="storenote" ColumnName="storenote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evidencenotes">
+      <EntityTypeMapping TypeName="EIMSModel.evidencenote">
+        <MappingFragment StoreEntitySet="evidencenote">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="evidencecode" ColumnName="evidencecode" />
+          <ScalarProperty Name="staffcode" ColumnName="staffcode" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="approvedstatuscode" ColumnName="approvedstatuscode" />
+          <ScalarProperty Name="notetime" ColumnName="notetime" />
+          <ScalarProperty Name="Thetype" ColumnName="Thetype" />
+          <ScalarProperty Name="approvedstaff" ColumnName="approvedstaff" />
+          <ScalarProperty Name="approvedtime" ColumnName="approvedtime" />
+          <ScalarProperty Name="evidencestatuscode" ColumnName="evidencestatuscode" />
+          <ScalarProperty Name="approvednote" ColumnName="approvednote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evidencestaffs">
+      <EntityTypeMapping TypeName="EIMSModel.evidencestaff">
+        <MappingFragment StoreEntitySet="evidencestaff">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="evidencecode" ColumnName="evidencecode" />
+          <ScalarProperty Name="staffcode" ColumnName="staffcode" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="begintime" ColumnName="begintime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evidencestatus">
+      <EntityTypeMapping TypeName="EIMSModel.evidencestatu">
+        <MappingFragment StoreEntitySet="evidencestatus">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="thetype" ColumnName="thetype" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="statusnumber" ColumnName="statusnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evidencetypes">
+      <EntityTypeMapping TypeName="EIMSModel.evidencetype">
+        <MappingFragment StoreEntitySet="evidencetype">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="thetype" ColumnName="thetype" />
+          <ScalarProperty Name="inspectiontime" ColumnName="inspectiontime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inspectionmaterials">
+      <EntityTypeMapping TypeName="EIMSModel.inspectionmaterial">
+        <MappingFragment StoreEntitySet="inspectionmaterial">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="evidencecode" ColumnName="evidencecode" />
+          <ScalarProperty Name="materialcode" ColumnName="materialcode" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="quantitycode" ColumnName="quantitycode" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="pickupdate" ColumnName="pickupdate" />
+          <ScalarProperty Name="staffcode" ColumnName="staffcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="leveltitles">
+      <EntityTypeMapping TypeName="EIMSModel.leveltitle">
+        <MappingFragment StoreEntitySet="leveltitle">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+          <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+          <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+          <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+          <ScalarProperty Name="man" ColumnName="man" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+          <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="managelevels">
+      <EntityTypeMapping TypeName="EIMSModel.managelevel">
+        <MappingFragment StoreEntitySet="managelevel">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="thetype" ColumnName="thetype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="materials">
+      <EntityTypeMapping TypeName="EIMSModel.material">
+        <MappingFragment StoreEntitySet="material">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="materialtype" ColumnName="materialtype" />
+          <ScalarProperty Name="quantitycode" ColumnName="quantitycode" />
+          <ScalarProperty Name="quantityname" ColumnName="quantityname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="partyleveltitles">
+      <EntityTypeMapping TypeName="EIMSModel.partyleveltitle">
+        <MappingFragment StoreEntitySet="partyleveltitle">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="man" ColumnName="man" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="eduduty1" ColumnName="eduduty1" />
+          <ScalarProperty Name="researchduty1" ColumnName="researchduty1" />
+          <ScalarProperty Name="edureducerate" ColumnName="edureducerate" />
+          <ScalarProperty Name="researchreducerate" ColumnName="researchreducerate" />
+          <ScalarProperty Name="eduduty" ColumnName="eduduty" />
+          <ScalarProperty Name="researchduty" ColumnName="researchduty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quantities">
+      <EntityTypeMapping TypeName="EIMSModel.quantity">
+        <MappingFragment StoreEntitySet="quantity">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="Thetype" ColumnName="Thetype" />
+          <ScalarProperty Name="basecode" ColumnName="basecode" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="regions">
+      <EntityTypeMapping TypeName="EIMSModel.region">
+        <MappingFragment StoreEntitySet="region">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="comparelevel" ColumnName="comparelevel" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+          <ScalarProperty Name="thetype" ColumnName="thetype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staffs">
+      <EntityTypeMapping TypeName="EIMSModel.staff">
+        <MappingFragment StoreEntitySet="staff">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="academictitlecode" ColumnName="academictitlecode" />
+          <ScalarProperty Name="degreecode" ColumnName="degreecode" />
+          <ScalarProperty Name="leveltitlecode" ColumnName="leveltitlecode" />
+          <ScalarProperty Name="departmentcode" ColumnName="departmentcode" />
+          <ScalarProperty Name="armyrankcode" ColumnName="armyrankcode" />
+          <ScalarProperty Name="partyleveltitlecode" ColumnName="partyleveltitlecode" />
+          <ScalarProperty Name="mobiphone" ColumnName="mobiphone" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="userpassword" ColumnName="userpassword" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="changepass" ColumnName="changepass" />
+          <ScalarProperty Name="academiclevelcode" ColumnName="academiclevelcode" />
+          <ScalarProperty Name="staffstatuscode" ColumnName="staffstatuscode" />
+          <ScalarProperty Name="provincecode" ColumnName="provincecode" />
+          <ScalarProperty Name="districtcode" ColumnName="districtcode" />
+          <ScalarProperty Name="towncode" ColumnName="towncode" />
+          <ScalarProperty Name="internalemail" ColumnName="internalemail" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="ethniccode" ColumnName="ethniccode" />
+          <ScalarProperty Name="religioncode" ColumnName="religioncode" />
+          <ScalarProperty Name="hometown" ColumnName="hometown" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="universitycode" ColumnName="universitycode" />
+          <ScalarProperty Name="civilid" ColumnName="civilid" />
+          <ScalarProperty Name="extensioncode" ColumnName="extensioncode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staffstatus">
+      <EntityTypeMapping TypeName="EIMSModel.staffstatu">
+        <MappingFragment StoreEntitySet="staffstatus">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="codeview" ColumnName="codeview" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="edittime" ColumnName="edittime" />
+          <ScalarProperty Name="edituser" ColumnName="edituser" />
+          <ScalarProperty Name="lock" ColumnName="lock" />
+          <ScalarProperty Name="lockdate" ColumnName="lockdate" />
+          <ScalarProperty Name="whois" ColumnName="whois" />
+          <ScalarProperty Name="isstaff" ColumnName="isstaff" />
+          <ScalarProperty Name="theorder" ColumnName="theorder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppConfigs">
+      <EntityTypeMapping TypeName="EIMSModel.AppConfig">
+        <MappingFragment StoreEntitySet="AppConfig">
+          <ScalarProperty Name="ImagePanelLogin" ColumnName="ImagePanelLogin" />
+          <ScalarProperty Name="ImageLogin" ColumnName="ImageLogin" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
